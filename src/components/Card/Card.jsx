@@ -1,7 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ id, poster_path, release_date, genres, title, overview }) => {
+const Card = ({
+  id,
+  poster_path,
+  release_date,
+  genres,
+  title,
+  overview,
+  popularity,
+}) => {
   let img =
     "https://rimatour.com/wp-content/uploads/2017/09/No-image-found.jpg";
   {
@@ -20,6 +28,7 @@ const Card = ({ id, poster_path, release_date, genres, title, overview }) => {
           <span>({(release_date = new Date(release_date).getFullYear())})</span>
         </h2>
         <h3>Overview</h3>
+        <h3>Popularity: {popularity}%</h3>
         <p>{!overview && "No review yet"}</p>
         <h3>Genres:</h3>
         <ul>
