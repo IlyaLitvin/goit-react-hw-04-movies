@@ -12,11 +12,11 @@ const Card = ({
 }) => {
   let img =
     "https://rimatour.com/wp-content/uploads/2017/09/No-image-found.jpg";
-  {
-    poster_path === null
-      ? (poster_path = img)
-      : (poster_path = `https://image.tmdb.org/t/p/w300${poster_path}`);
-  }
+
+  poster_path === null
+    ? (poster_path = img)
+    : (poster_path = `https://image.tmdb.org/t/p/w300${poster_path}`);
+
   return (
     <div key={id} className="container">
       <div>
